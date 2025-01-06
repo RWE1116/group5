@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import os
-base_path = "downloads"
+
 # 定義顯示圖片的函數
 def display_image(image_path, title, description="無描述"):
     """顯示圖片及其描述，並檢查圖片是否存在"""
@@ -29,7 +29,7 @@ page = st.sidebar.selectbox(
 
 # 根據選擇的頁面顯示內容
 if page == "概論":
-	
+base_path = "downloads"	
     st.markdown(""" 
         ## 主題一、創新夾持裝置機械設計
     """)
