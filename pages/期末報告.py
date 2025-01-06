@@ -29,7 +29,7 @@ page = st.sidebar.selectbox(
 
 # 根據選擇的頁面顯示內容
 if page == "概論":
-base_path = "downloads"	
+	
     st.markdown(""" 
         ## 主題一、創新夾持裝置機械設計
     """)
