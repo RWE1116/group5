@@ -16,7 +16,15 @@ def display_image(image_path, title, description="無描述"):
         except Exception as e:
             st.error(f"無法顯示圖片 {image_path}: {e}")
     else:
-        st.error(f"找不到圖片：{image_path}")
+        st.error(f"找不到文件：{file_path}")
+        st.text(f"當前工作目錄：{os.getcwd()}")  # 顯示當前工作目錄
+        st.text(f"檢查的路徑：{file_path}")  # 顯示檢查的路徑
+
+# 顯示相關資料下載部分
+st.subheader("相關資料下載")
+
+# 使用相對路徑設定文件路徑
+base_path = "downloads"  # 假設所有的文件都放在此文件夾中
 
 # 設置頁面標題和樣式
 st.title("期末報告")
@@ -45,9 +53,9 @@ if page == "概論":
     適用溫度範圍：可在 0 至 60 ℃ 的環境下運行，適合多種工業環境。
     """)
     # 插入圖片
-    img_path = "downloads/期末報告1.png"
+    img_path = "期末報告1.png"
     display_image(img_path, "產生器外觀與規格", "產生器外觀與規格")
-    img_path = "downloads/期末報告2.png"
+    img_path = "期末報告2.png"
     display_image(img_path, "產生器尺寸", "產生器尺寸")
     st.markdown(""" 
     2.整理各式(家)真空產生器的產品與功能介紹FT系列真空產生器功能高效真空產生：
@@ -59,7 +67,7 @@ if page == "概論":
     適用於自動化設備中的搬運、固定、包裝等需要真空的操作。
     易於安裝：各型號配備不同的接管口徑（如 M5、1/8"、1/4"、3/8"），方便集成到各類系統中。
     """)
-    img_path = "downloads/期末報告3.png"
+    img_path = "期末報告3.png"
     display_image(img_path, "表格", "表格")
     st.markdown(""" 
     VK真空產生器
@@ -68,9 +76,9 @@ if page == "概論":
     LED 顯示壓力傳感器( 2 種開關輸出、1 種開關輸出 + 類比輸出)。
     低成本、易於使用的機械壓力傳感器，根據用途選擇適合的型式。
     """)
-    img_path = "downloads/期末報告4.png"
+    img_path = "期末報告4.png"
     display_image(img_path, "VK真空產生器", "VK真空產生器")
-    img_path = "downloads/期末報告5.png"
+    img_path = "期末報告5.png"
     display_image(img_path, "VK真空產生器特點", "VK真空產生器特點")
     st.markdown(""" 
     VK真空產生器功能真空產生與破壞：
@@ -79,7 +87,7 @@ if page == "概論":
     壓力監控：配備數字顯示壓力傳感器，實時監控真空壓力，確保系統穩定運行。 
     過濾與消音：內置真空過濾器和消音器，保護系統元件，降低運行噪音。
     """)
-    img_path = "downloads/期末報告6.png"
+    img_path = "期末報告6.png"
     display_image(img_path, "規格表", "規格表")
     st.markdown(""" 
 1. 整理各式(家)散熱器元件或模組的特點 台灣協緯金屬:鋁擠型散熱片03特點：
@@ -100,7 +108,7 @@ if page == "概論":
 
 公司具備沖壓型、鋁擠型和表面處理等多種製造工藝，確保產品質量和性能達到行業領先水平。
     """)
-    img_path = "downloads/期末報告7.png"
+    img_path = "期末報告7.png"
     display_image(img_path, "鋁擠型散熱片03", "鋁擠型散熱片03")
  
     st.markdown(""" 
@@ -146,9 +154,9 @@ if page == "概論":
 
 適用於各類電子設備和工業應用，特別是在高功率密度和有限空間的情況下，提供有效的散熱解決方案。
     """)
-    img_path = "downloads/期末報告8.png"
+    img_path = "期末報告8.png"
     display_image(img_path, "複合材料散熱器(GDC Series-BCX系列)", "複合材料散熱器(GDC Series-BCX系列)") 
-    img_path = "downloads/期末報告9.png"
+    img_path = "期末報告9.png"
     display_image(img_path, "複合材料散熱器(GDC Series-BCX系列)特性表", "複合材料散熱器(GDC Series-BCX系列)特性表")    
  
     st.markdown(""" 
@@ -187,7 +195,7 @@ elif page == "原理與設計方法":
     3. 通過空氣的高速流動，卷吸噴嘴周邊空氣，使擴散室的壓力下降，真空街口空氣會流入擴散器。
     4. 流入的真空接口空氣和噴嘴放出的壓縮空氣一起，從擴散室釋放到大氣中。
     """)
-    img_path = "downloads/期末報告11.png"
+    img_path = "期末報告11.png"
     display_image(img_path, "設計剖面圖", "設計剖面圖")
 
     st.markdown(""" 
@@ -196,28 +204,28 @@ elif page == "原理與設計方法":
     可由柏努力定理得流體流速與壓力關係如下:
     Q = V1A1 = V2A2 = V3A3
     """)
-    img_path = "downloads/期末報告12.png"
+    img_path = "期末報告12.png"
     display_image(img_path, "柏努力定理", "柏努力定理")
     
     st.markdown(""" 
     當流量固定,斷面截面積不同將造成不同的流速,以下分析三種斷面、流速及壓力情形:
     """)
-    img_path = "downloads/期末報告13.png"
+    img_path = "期末報告13.png"
     display_image(img_path, "流速壓力比較表", "流速壓力比較表")
     
     st.markdown(""" 
     2. 依據原理與工件大小之零組件設計圖
     """)    
-    img_path = "downloads/工程圖1.jpg"
+    img_path = "工程圖1.jpg"
     display_image(img_path, "零組件設計圖", "零組件設計圖")
     
-    img_path = "downloads/生成器 1.png"  
+    img_path = "生成器 1.png"  
     display_image(img_path, "生成器3D圖", "生成器3D圖")
     
     cols = st.columns(3)
 
     image_paths = [
-        "downloads/生成器2.jpg", "downloads/生成器3.jpg", "downloads/生成器4.jpg",
+        "生成器2.jpg", "生成器3.jpg", "生成器4.jpg",
     ]
     titles = ["排氣", "真空區", "進氣"]
     descriptions = ["排氣", "真空區", "進氣"]
@@ -260,7 +268,7 @@ elif page == "原理與設計方法":
     """)
     
     image_paths = [
-        "downloads/散熱器 尺寸1.jpg", "downloads/散熱器 尺寸2.jpg", "downloads/散熱器 尺寸3.jpg","downloads/散熱器 尺寸4.jpg"
+        "散熱器 尺寸1.jpg", "散熱器 尺寸2.jpg", "散熱器 尺寸3.jpg","散熱器 尺寸4.jpg"
     ]
     titles = ["守序圓柱", "守序方柱", "混亂圓柱", "混亂方柱"]
     descriptions = ["守序圓柱", "守序方柱", "混亂圓柱", "混亂方柱"]    
@@ -288,7 +296,7 @@ elif page == "實驗量測與數據分析":
 
     """)  
     
-    img_path = "downloads/期末報告14.png"
+    img_path = "期末報告14.png"
     display_image(img_path, "設計參數計算", "設計參數計算")
     
     st.markdown(""" 
@@ -300,7 +308,7 @@ elif page == "實驗量測與數據分析":
 
     4.	查看跡線確認負壓區是否正確，及記錄數值
     """)
-    img_path = "downloads/期末報告15.png"
+    img_path = "期末報告15.png"
     display_image(img_path, "三組設計", "三組設計參數計算結果")
     
     st.markdown(""" 
@@ -308,7 +316,7 @@ elif page == "實驗量測與數據分析":
     1.依照Excel檔進行設計參數計算
     """)    
     
-    img_path = "downloads/期末報告16.png"
+    img_path = "期末報告16.png"
     display_image(img_path, "三組設計", "三組設計參數計算結果")
     
     st.markdown(""" 
@@ -339,9 +347,9 @@ elif page == "實驗量測與數據分析":
     6.	找到time	drag	lift文件位置後，在EXCEL生成圖表
     7.	紀錄跡線及數據
     """)   
-    img_path = "downloads/期末報告17.png"
+    img_path = "期末報告17.png"
     display_image(img_path, "excel計算", "excel計算")
-    img_path = "downloads/期末報告18.png"
+    img_path = "期末報告18.png"
     display_image(img_path, "記錄跡線及數據", "記錄跡線及數據")    
 
 
@@ -353,19 +361,19 @@ elif page == "結果與討論":
 1.依照Excel檔建立真空產生器與周邊3D設計圖(零件、組合、爆炸)
 
     """)
-    img_path = "downloads/生成器 1.png"
+    img_path = "生成器 1.png"
     display_image(img_path, "記錄跡線及數據", "記錄跡線及數據")
     st.markdown("""
     2.	依照Excel檔建立真空產生器計算書(公式法)
 
     """)
-    img_path = "downloads/期末報告19.png"
+    img_path = "期末報告19.png"
     display_image(img_path, "記錄跡線及數據", "記錄跡線及數據")
     st.markdown("""
     3.	繪圖並討論數值模擬結果及計算書結果與數值模擬(CAE法)之誤差?
     """)    
     image_paths = [
-        "downloads/期末報告21.png", "downloads/期末報告22.png"
+        "期末報告21.png", "期末報告22.png"
     ]
     titles = ["期末考評分表", "計算過程"]
     descriptions = ["計算過程", "期末考評分表"]
@@ -390,12 +398,12 @@ elif page == "結果與討論":
 2.依照Excel檔建立散熱器計算書(公式法)
 
     """)
-    img_path = "downloads/期末報告23.png"
+    img_path = "期末報告23.png"
     display_image(img_path, "記錄跡線及數據", "記錄跡線及數據")
     st.markdown("""
     3.	繪圖並討論數值模擬結果及計算書結果與數值模擬(CAE法)之誤差?
     """)
-    img_path = "downloads/期末報告21.png"
+    img_path = "期末報告21.png"
     display_image(img_path, "期末考評分表", "計算過程")
     st.markdown("""
     4.	繪圖並討論實驗測試結果及可能誤差大小與原因?
@@ -455,7 +463,7 @@ elif page == "聲明":
 成員簽名：
     """)
     image_paths = [
-        "downloads/聲明1.jpg", "downloads/聲明2.jpg", "downloads/聲明3.jpg", "downloads/聲明4.jpg", "downloads/聲明5.jpg"
+        "聲明1.jpg", "聲明2.jpg", "聲明3.jpg", "聲明4.jpg", "聲明5.jpg"
     ]
     titles = [" 詹耀賢", "葉桓亞", "陳瑨維", "陳靚芸", "莊雨薰"]
     descriptions = ["詹耀賢親簽", "葉桓亞親簽", "陳瑨維親簽", "陳靚芸親簽", "莊雨薰親簽"]
