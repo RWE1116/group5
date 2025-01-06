@@ -2,14 +2,13 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import os
-
+base_path = "downloads"
 # 定義顯示圖片的函數
 def display_image(image_path, title, description="無描述"):
     """顯示圖片及其描述，並檢查圖片是否存在"""
     # 確保圖片路徑存在
     if os.path.exists(image_path):
         try:
-	    base_path = "downloads" 
             img = Image.open(image_path)
             st.image(img, caption=title, use_column_width=True)  # 使用Streamlit的image顯示圖片
             st.write(f"<h5>{description}</h5>", unsafe_allow_html=True)
