@@ -9,6 +9,7 @@ def display_image(image_path, title, description="無描述"):
     # 確保圖片路徑存在
     if os.path.exists(image_path):
         try:
+	    base_path = "downloads" 
             img = Image.open(image_path)
             st.image(img, caption=title, use_column_width=True)  # 使用Streamlit的image顯示圖片
             st.write(f"<h5>{description}</h5>", unsafe_allow_html=True)
@@ -20,7 +21,7 @@ def display_image(image_path, title, description="無描述"):
 
 # 設置頁面標題和樣式
 st.title("期末報告")
-base_path = "downloads" 
+
 # 主選單
 page = st.sidebar.selectbox(
     "期末報告",
