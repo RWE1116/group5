@@ -158,6 +158,32 @@ elif page == "實驗數據表格":
 
 elif page == "圖片與影片":
     st.subheader("實驗圖片與影片展示")
+    st.markdown("### 圖片展示")
+    
+    images = [
+        (r"downloads/3018.jpg", "當轉速為30溫度為18時的結果黏滯2.9", "第一組實驗"),
+        (r"downloads/5018.jpg", "當轉速為50溫度為18時的結果黏滯11.5", "第二組實驗"),
+        (r"downloads/6018.jpg", "當轉速為60溫度為18時的結果黏滯15.8", "第三組實驗"),
+        (r"downloads/3036.jpg", "當轉速為30溫度為18時的結果黏滯1.4", "第四組實驗"),
+        (r"downloads/5036.jpg", "當轉速為50溫度為18時的結果黏滯9.1", "第五組實驗"),
+        (r"downloads/6036.jpg", "當轉速為60溫度為18時的結果黏滯11.7", "第六組實驗"),
+        (r"downloads/3057.jpg", "當轉速為30溫度為18時的結果黏滯2.4", "第七組實驗"),
+        (r"downloads/5057.jpg", "當轉速為50溫度為18時的結果黏滯4.7", "第八組實驗"),
+        (r"downloads/6057.jpg", "當轉速為60溫度為18時的結果黏滯2.2", "第九組實驗"),
+    ]
+    
+    # 每行顯示3張圖片
+    num_images_per_row = 3
+    for i in range(0, len(images), num_images_per_row):
+        # 創建三列
+        cols = st.columns(num_images_per_row)
+        
+        # 顯示每列的圖片
+        for j in range(num_images_per_row):
+            if i + j < len(images):  # 防止索引超出範圍
+                image_path, title, description = images[i + j]
+                with cols[j]:
+                    display_image(image_path, title, description)
     
 
 elif page == "相關資料":

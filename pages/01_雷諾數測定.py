@@ -178,11 +178,11 @@ elif page == "相關資料":
         st.error("找不到文件：downloads/實驗1. 雷諾數實驗.doc")
     # 下載 Excel 文件
     try:
-        with open(r"downloads/實驗1. 雷諾數實驗.xlsx", "rb") as file:
+        with open(r"downloads/實驗1. 雷諾數實驗.xls", "rb") as file:
             st.download_button(
-                label="下載 實驗1. 雷諾數實驗.xlsx",  # 按鈕標籤
+                label="下載 實驗1. 雷諾數實驗.xls",  # 按鈕標籤
                 data=file.read(),            # 文件內容
-                file_name="實驗1. 雷諾數實驗.xlsx",  # 文件名稱
+                file_name="實驗1. 雷諾數實驗.xls",  # 文件名稱
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # MIME 類型，Excel 文件
             )
     except FileNotFoundError:

@@ -27,7 +27,7 @@ base_path = "downloads"  # 假設所有的文件都放在此文件夾
 # 下載文件1 (水衝擊實驗)
 download_file(os.path.join(base_path, "實驗1. 雷諾數實驗.pdf"), "下載 實驗1. 雷諾數實驗.pdf", "application/pdf", "實驗1. 雷諾數實驗.pdf", "key1")
 download_file(os.path.join(base_path, "實驗1. 雷諾數實驗.doc"), "下載 實驗1. 雷諾數實驗.doc", "application/msword", "實驗1. 雷諾數實驗.doc", "key2")
-download_file(os.path.join(base_path, "實驗1. 雷諾數實驗.xlsx"), "下載 實驗1. 雷諾數實驗.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "實驗1. 雷諾數實驗.xlsx", "key3")
+download_file(os.path.join(base_path, "實驗1. 雷諾數實驗.xls"), "下載 實驗1. 雷諾數實驗.xls", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "實驗1. 雷諾數實驗.xls", "key3")
 st.markdown("---")  # 分隔線
 
 # 下載文件2 (水衝擊實驗)
