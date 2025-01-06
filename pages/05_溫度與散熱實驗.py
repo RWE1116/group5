@@ -15,7 +15,7 @@ page = st.sidebar.selectbox(
 def display_image(image_path, title, description):
     try:
         img = Image.open(image_path)
-        st.image(img, caption=title, use_column_width=True)  # 使用Streamlit的image顯示圖片
+        st.image(img, caption=title,use_container_width=True)  # 使用Streamlit的image顯示圖片
         st.write(f"<h3 style='font-size: 20px;'>{description}</h3>", unsafe_allow_html=True)
         st.markdown("---")  # 分隔線
     except FileNotFoundError:
@@ -56,7 +56,7 @@ elif page == "實驗原理":
     image_path = r"downloads/實驗五實驗原理.png"
     try:
         img = Image.open(image_path)
-        st.image(img, caption="實驗五實驗原理", use_column_width=True)  # 顯示圖片
+        st.image(img, caption="實驗五實驗原理",use_container_width=True)  # 顯示圖片
     except FileNotFoundError:
         st.error(f"找不到圖片：{image_path}")
 

@@ -10,7 +10,7 @@ def display_image(image_path, title, description="無描述"):
     if os.path.exists(image_path):
         try:
             img = Image.open(image_path)
-            st.image(img, caption=title, use_column_width=True)  # 使用Streamlit的image顯示圖片
+            st.image(img, caption=title,use_container_width=True)  # 使用Streamlit的image顯示圖片
             st.write(f"<h5>{description}</h5>", unsafe_allow_html=True)
             st.markdown("---")  # 分隔線
         except Exception as e:
