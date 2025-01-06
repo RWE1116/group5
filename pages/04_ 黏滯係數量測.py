@@ -50,7 +50,7 @@ elif page == "儀器與設備":
 
     ]
     image_paths = [
-        "Y:/a/downloads/實驗四器材1.png", "Y:/a/downloads/實驗四器材2.png", "Y:/a/downloads/實驗四器材3.png"
+        "downloads/實驗四器材1.png", "downloads/實驗四器材2.png", "downloads/實驗四器材3.png"
     ]
     titles = ["黏度計面板", "黏度計背面", "黏度計本體"]
     descriptions = ["黏度計面板", "黏度計背面", "黏度計本體"]    
@@ -80,7 +80,7 @@ elif page == "實驗原理":
     """)
 
     # 顯示第一張圖片
-    img_path = os.path.join("Y:/a/downloads", "實驗四原理1.png")
+    img_path = os.path.join("downloads", "實驗四原理1.png")
     display_image(img_path, "剪應力", "剪應力。")
 
     st.markdown("""
@@ -88,7 +88,7 @@ elif page == "實驗原理":
     """)
 
     # 顯示第二張圖片
-    img_path = os.path.join("Y:/a/downloads", "實驗四原理2.png")
+    img_path = os.path.join("downloads", "實驗四原理2.png")
     display_image(img_path, "流體角度", "流體角度")
 
     st.markdown(""" 
@@ -97,7 +97,7 @@ elif page == "實驗原理":
     """)
 
     # 顯示第三張圖片
-    img_path = os.path.join("Y:/a/downloads", "實驗四原理3.png")
+    img_path = os.path.join("downloads", "實驗四原理3.png")
     display_image(img_path, "氣體之黏滯力", "氣體之黏滯力")
 
     st.markdown(""" 
@@ -105,7 +105,7 @@ elif page == "實驗原理":
     """)
 
     # 顯示第四張圖片
-    img_path = os.path.join("Y:/a/downloads", "實驗四原理4.png")
+    img_path = os.path.join("downloads", "實驗四原理4.png")
     display_image(img_path, "液體分子的長鍊", "液體分子的長鍊。")
     st.markdown(""" 
 黏滯力與溫度之關係： 
@@ -121,12 +121,12 @@ elif page == "實驗步驟":
     ## 四、實驗步驟
 1.	先將黏度計安裝完成並調整水平調整使水瓶氣泡至於黑圈中且打開黏度計電源
     """)
-    img_path = os.path.join("Y:/a/downloads", "實驗四器材4.png")
+    img_path = os.path.join("downloads", "實驗四器材4.png")
     display_image(img_path, "調整水平", "打開黏度計電源")
     st.markdown("""
 2.	取一個 600ml 標準燒杯，將樣品加至轉針測量高度，黏度計準備好參數設定完成。
     """)
-    img_path = os.path.join("Y:/a/downloads", "實驗四器材5.png")
+    img_path = os.path.join("downloads", "實驗四器材5.png")
     display_image(img_path, "燒杯與黏度計", "燒杯與黏度計")
     
     st.markdown("""
@@ -165,7 +165,7 @@ elif page == "相關資料":
     
     # 下載 PDF 文件
     try:
-        with open(r"Y:/a/downloads/實驗4. 黏滯係數量測.pdf", "rb") as file:
+        with open(r"downloads/實驗4. 黏滯係數量測.pdf", "rb") as file:
             st.download_button(
                 label="下載 實驗4. 黏滯係數量測.pdf",
                 data=file.read(),
@@ -173,11 +173,11 @@ elif page == "相關資料":
                 mime="application/pdf"  # 設置 MIME 類型為 PDF
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗4. 黏滯係數量測.pdf")
+        st.error("找不到文件：downloads/實驗4. 黏滯係數量測.pdf")
 
     # 下載 DOC 檔案
     try:
-        with open(r"Y:/a/downloads/實驗4. 黏滯係數量測.doc", "rb") as file:
+        with open(r"downloads/實驗4. 黏滯係數量測.doc", "rb") as file:
             st.download_button(
                 label="下載 實驗4. 黏滯係數量測.doc",
                 data=file.read(),
@@ -185,10 +185,10 @@ elif page == "相關資料":
                 mime="application/msword"  # DOC 文件的 MIME 類型
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗4. 黏滯係數量測.doc")
+        st.error("找不到文件：downloads/實驗4. 黏滯係數量測.doc")
     # 下載 Excel 文件
     try:
-        with open(r"Y:/a/downloads/實驗4. 黏滯係數量測.xlsx", "rb") as file:
+        with open(r"downloads/實驗4. 黏滯係數量測.xlsx", "rb") as file:
             st.download_button(
                 label="下載 實驗4. 黏滯係數量測.xlsx",  # 按鈕標籤
                 data=file.read(),            # 文件內容
@@ -196,4 +196,4 @@ elif page == "相關資料":
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # MIME 類型，Excel 文件
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗4. 黏滯係數量測.xlsx")
+        st.error("找不到文件：downloads/實驗4. 黏滯係數量測.xlsx")

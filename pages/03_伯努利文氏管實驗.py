@@ -67,7 +67,7 @@ elif page == "儀器與設備":
     st.dataframe(df_instruments)
 
     # 插入圖片
-    img_path = "Y:/a/downloads/實驗三器材.png"
+    img_path = "downloads/實驗三器材.png"
     display_image(img_path, "實驗所用儀器與設備")
 
 
@@ -75,12 +75,12 @@ elif page == "實驗原理":
     st.markdown("## 三、實驗原理")
     
     # 添加图片展示
-    img_path = os.path.join("Y:/a/downloads", "實驗三原理1.png")
+    img_path = os.path.join("downloads", "實驗三原理1.png")
     display_image(img_path, "噴嘴設計示意圖", "其中，對於關鍵元件─噴嘴(Nozzle)的設計，也有其依據的準則，其尺寸、表 面粗糙度都受到規範的限制。噴嘴為一特殊設計的漸縮管，具有較高且穩定的Cd 值，在不同的雷諾數狀態下，可達0.95 ~ 0.99，表示流體通過時會有較小的摩擦損失，可有效用做流量計算。")
     
     # 多张图片及其描述
     image_paths = [
-        "Y:/a/downloads/實驗三原理2.png", "Y:/a/downloads/實驗三原理3.png",
+        "downloads/實驗三原理2.png", "downloads/實驗三原理3.png",
     ]
     titles = ["規格示意", "與雷諾數關係圖"]
     descriptions = ["噴頭尺寸", "尺寸比值"]
@@ -98,15 +98,15 @@ elif page == "實驗原理":
     其中，$P_1$、$P_2$ 分別為兩個位置的壓力，$v_1$、$v_2$ 分別為兩個位置的流速，$h_1$、$h_2$ 是兩位置的高度。
     """)
     
-    img_path = os.path.join("Y:/a/downloads", "實驗三原理4.png")
+    img_path = os.path.join("downloads", "實驗三原理4.png")
     display_image(img_path, "伯努利方程式(Bernoulli’s equation)", "由於噴嘴上游腔室可視為均壓型壓力腔室，其流體速度遠小於喉部速度，故 U1小於U2，則伯努利方程式可簡化為")
-    img_path = os.path.join("Y:/a/downloads", "實驗三原理5.png")
+    img_path = os.path.join("downloads", "實驗三原理5.png")
     display_image(img_path, "伯努利方程式(Bernoulli’s equation)", "根據符合質量守恆的連續方程式(Continuous equation)，通過噴嘴喉部的理論 流量為：")
-    img_path = os.path.join("Y:/a/downloads", "實驗三原理6.png")
+    img_path = os.path.join("downloads", "實驗三原理6.png")
     display_image(img_path, "伯努利方程式(Bernoulli’s equation)", "實際流量則需要考慮流量係數Cd：")
-    img_path = os.path.join("Y:/a/downloads", "實驗三原理7.png")
+    img_path = os.path.join("downloads", "實驗三原理7.png")
     display_image(img_path, "伯努利方程式(Bernoulli’s equation)", "由於風洞設計係依AMCA 210-16之規範條件設計，則Cd值計算可參考規範 中之經驗公式，其為雷諾數的函數，如下：")
-    img_path = os.path.join("Y:/a/downloads", "實驗三原理8.png")
+    img_path = os.path.join("downloads", "實驗三原理8.png")
     display_image(img_path, "伯努利方程式(Bernoulli’s equation)", "藉由以上公式推導，可以了解此流量產生裝置的計算方法。")
 
 elif page == "實驗步驟":
@@ -160,11 +160,11 @@ elif page == "圖片與影片":
 
     # 定義圖片和描述
     images = [
-        ("Y:/a/downloads/實驗30V.jpg", "當電壓為0V時的結果", "這是0V下的實驗結果，液面平穩。"),
-        ("Y:/a/downloads/實驗320V.jpg", "當電壓為20V時的結果", "這是20V下的實驗結果，平穩微升高。"),
-        (r"Y:/a/downloads/實驗330V.jpg", "當電壓為230V時的結果", "這是30V下的實驗結果，明顯升高。"),
-        (r"Y:/a/downloads/實驗340V.jpg", "當電壓為240V時的結果", "這是40V下的實驗結果，與前次相比無明顯升高。"),
-	("Y:/a/downloads/文氏管.png", "文氏管示意圖", "展示文氏管的結構與運作方式。")
+        ("downloads/實驗30V.jpg", "當電壓為0V時的結果", "這是0V下的實驗結果，液面平穩。"),
+        ("downloads/實驗320V.jpg", "當電壓為20V時的結果", "這是20V下的實驗結果，平穩微升高。"),
+        (r"downloads/實驗330V.jpg", "當電壓為230V時的結果", "這是30V下的實驗結果，明顯升高。"),
+        (r"downloads/實驗340V.jpg", "當電壓為240V時的結果", "這是40V下的實驗結果，與前次相比無明顯升高。"),
+	("downloads/文氏管.png", "文氏管示意圖", "展示文氏管的結構與運作方式。")
     ]
     # 使用二列分配圖片
     cols = st.columns(2)  # 創建二列
@@ -180,7 +180,7 @@ elif page == "圖片與影片":
             display_image(image_path, title, description)
 
     st.subheader("實驗影片")
-    video_path = 'Y:/a/downloads/實作影片1.mp4'
+    video_path = 'downloads/實作影片1.mp4'
     if os.path.exists(video_path):
         st.video(video_path)
     else:
@@ -191,7 +191,7 @@ elif page == "相關資料":
     
     # 下載 PDF 文件
     try:
-        with open(r"Y:/a/downloads/實驗3. 伯努利文氏管實驗.pdf", "rb") as file:
+        with open(r"downloads/實驗3. 伯努利文氏管實驗.pdf", "rb") as file:
             st.download_button(
                 label="下載 實驗3. 伯努利文氏管實驗.pdf",
                 data=file.read(),
@@ -199,11 +199,11 @@ elif page == "相關資料":
                 mime="application/pdf"  # 設置 MIME 類型為 PDF
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗3. 伯努利文氏管實驗.pdf")
+        st.error("找不到文件：downloads/實驗3. 伯努利文氏管實驗.pdf")
 
     # 下載 DOC 檔案
     try:
-        with open(r"Y:/a/downloads/實驗3. 伯努利文氏管實驗.doc", "rb") as file:
+        with open(r"downloads/實驗3. 伯努利文氏管實驗.doc", "rb") as file:
             st.download_button(
                 label="下載 實驗3. 伯努利文氏管實驗.doc",
                 data=file.read(),
@@ -211,11 +211,11 @@ elif page == "相關資料":
                 mime="application/msword"  # DOC 文件的 MIME 類型
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗3. 伯努利文氏管實驗.doc")
+        st.error("找不到文件：downloads/實驗3. 伯努利文氏管實驗.doc")
 
     # 下載 STEP 檔案
     try:
-        with open("Y:/a/downloads/文氏管.STEP", "rb") as file:
+        with open("downloads/文氏管.STEP", "rb") as file:
             st.download_button(
                 label="下載 文氏管.STEP 檔案",  # 按鈕標籤
                 data=file.read(),        # 文件內容
@@ -223,18 +223,18 @@ elif page == "相關資料":
                 mime="application/step"   # MIME 類型，STEP 文件通常使用 "application/step"
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/文氏管.STEP")
+        st.error("找不到文件：downloads/文氏管.STEP")
 
     # 下載 ZIP 文件
     try:
-        with open(r"Y:/a/downloads/Venturi_Geom_3d.zip", "rb") as file:
+        with open(r"downloads/Venturi_Geom_3d.zip", "rb") as file:
             st.download_button(
                 label="下載 Venturi_Geom_3d.zip",
                 data=file.read(),
                 file_name="Venturi_Geom_3d.zip",
                 mime="application/zip"  # 設置 MIME 類型為 ZIP
             )
-        with open(r"Y:/a/downloads/Venturi_Geom_2d.zip", "rb") as file:
+        with open(r"downloads/Venturi_Geom_2d.zip", "rb") as file:
             st.download_button(
                 label="下載 Venturi_Geom_2d.zip",
                 data=file.read(),
@@ -242,11 +242,11 @@ elif page == "相關資料":
                 mime="application/zip"  # 設置 MIME 類型為 ZIP
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/Venturi_Geom_2d.zip")
+        st.error("找不到文件：downloads/Venturi_Geom_2d.zip")
 
     # 下載 Excel 文件
     try:
-        with open(r"Y:/a/downloads/Vacuum Generator Design(1131225)template.xlsx", "rb") as file:
+        with open(r"downloads/Vacuum Generator Design(1131225)template.xlsx", "rb") as file:
             st.download_button(
                 label="下載 Vacuum Generator Design(1131225)template.xlsx",  # 按鈕標籤
                 data=file.read(),            # 文件內容
@@ -254,5 +254,5 @@ elif page == "相關資料":
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # MIME 類型，Excel 文件
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/Vacuum Generator Design(1131225)template.xlsx")
+        st.error("找不到文件：downloads/Vacuum Generator Design(1131225)template.xlsx")
 

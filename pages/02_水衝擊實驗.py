@@ -67,10 +67,10 @@ elif page == "儀器與設備":
     st.dataframe(df_instruments)
     
     # 插入圖片
-    img_path = "Y:/a/downloads/實驗二器材1.png"
+    img_path = "downloads/實驗二器材1.png"
     display_image(img_path, "實驗所用儀器與設備")
     
-    img_path = "Y:/a/downloads/實驗二器材2.jpg"
+    img_path = "downloads/實驗二器材2.jpg"
     display_image(img_path, "砝碼")
 
 elif page == "實驗原理":
@@ -80,15 +80,15 @@ elif page == "實驗原理":
 """)
 
     # 添加圖片展示
-    img_path = os.path.join("Y:/a/downloads", "實驗二原理1.png")
+    img_path = os.path.join("downloads", "實驗二原理1.png")
     display_image(img_path, "水平噴流及圓錐噴流示意圖", "噴流的設計對受力的影響。")
     
-    img_path = os.path.join("Y:/a/downloads", "實驗二原理2.png")
+    img_path = os.path.join("downloads", "實驗二原理2.png")
     display_image(img_path, "半圓噴流示意圖", "噴流的設計對受力的影響。")
 
-    img_path = os.path.join("Y:/a/downloads", "實驗二原理3.png")
+    img_path = os.path.join("downloads", "實驗二原理3.png")
     display_image(img_path, "柏努利公式", "流體在水平射流與柏努利公式的關係。")
-    img_path = os.path.join("Y:/a/downloads", "實驗二原理4.png")
+    img_path = os.path.join("downloads", "實驗二原理4.png")
     display_image(img_path, "器械工作圖", "流體在器械中運作方式。")
 elif page == "實驗步驟":
     st.markdown("""
@@ -158,12 +158,12 @@ elif page == "圖片與影片":
     st.subheader("實驗圖片與影片展示")
 
     # 添加图片展示
-    img_path = os.path.join("Y:/a/downloads", "實驗2-1.jpg")
+    img_path = os.path.join("downloads", "實驗2-1.jpg")
     display_image(img_path, "重量", "8mm噴頭搭配水平硯板測量結果為870gw，測得之水量為33L/min")
     
     # 多张图片及其描述
     image_paths = [
-        "Y:/a/downloads/實驗2-2.jpg", "Y:/a/downloads/實驗2-3.jpg", "Y:/a/downloads/實驗2-4.jpg", "Y:/a/downloads/實驗2-5.jpg","Y:/a/downloads/實驗2-6.jpg", "Y:/a/downloads/實驗2-7.jpg","Y:/a/downloads/實驗2-8.jpg", "Y:/a/downloads/實驗2-9.jpg"
+        "downloads/實驗2-2.jpg", "downloads/實驗2-3.jpg", "downloads/實驗2-4.jpg", "downloads/實驗2-5.jpg","downloads/實驗2-6.jpg", "downloads/實驗2-7.jpg","downloads/實驗2-8.jpg", "downloads/實驗2-9.jpg"
     ]
     titles = ["重量", "水量","重量", "水量","重量","重量","重量", "水量"]
     descriptions = ["8mm噴頭搭配45度硯板測量結果為735gw，測得之水量為32L/min", "8mm噴頭搭配45度硯板測量結果為735gw，測得之水量為32L/min","8mm噴頭搭配半圓形硯板測量結果為1005gw，測得之水量為26L/min", "8mm噴頭搭配半圓形硯板測量結果為1005gw，測得之水量為26L/min","5mm噴頭搭配水平硯板測量結果為820gw，測得之水量為20L/min", "5mm噴頭搭配45度硯板測量結果為735gw，測得之水量為25.5L/min","5mm噴頭搭配半圓形硯板測量結果為1005gw，測得之水量為18L/min", "5mm噴頭搭配半圓形硯板測量結果為1005gw，測得之水量為18L/min"]
@@ -180,7 +180,7 @@ elif page == "相關資料":
     
     # 下載 PDF 文件
     try:
-        with open(r"Y:/a/downloads/實驗2. 水衝擊實驗.pdf", "rb") as file:
+        with open(r"downloads/實驗2. 水衝擊實驗.pdf", "rb") as file:
             st.download_button(
                 label="下載 實驗2. 水衝擊實驗.pdf",
                 data=file.read(),
@@ -188,11 +188,11 @@ elif page == "相關資料":
                 mime="application/pdf"  # 設置 MIME 類型為 PDF
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗2. 水衝擊實驗.pdf")
+        st.error("找不到文件：downloads/實驗2. 水衝擊實驗.pdf")
 
     # 下載 DOC 檔案
     try:
-        with open(r"Y:/a/downloads/實驗2. 水衝擊實驗.doc", "rb") as file:
+        with open(r"downloads/實驗2. 水衝擊實驗.doc", "rb") as file:
             st.download_button(
                 label="下載 實驗2. 水衝擊實驗.doc",
                 data=file.read(),
@@ -200,11 +200,11 @@ elif page == "相關資料":
                 mime="application/msword"  # DOC 文件的 MIME 類型
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗2. 水衝擊實驗.doc")
+        st.error("找不到文件：downloads/實驗2. 水衝擊實驗.doc")
     
     # 下載 Excel 檔案
     try:
-        with open(r"Y:/a/downloads/實驗2. 水衝擊實驗.xls", "rb") as file:
+        with open(r"downloads/實驗2. 水衝擊實驗.xls", "rb") as file:
             st.download_button(
                 label="下載 實驗2. 水衝擊實驗.xls",  # 按鈕標籤
                 data=file.read(),            # 文件內容
@@ -212,6 +212,6 @@ elif page == "相關資料":
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # MIME 類型，Excel 文件
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗2. 水衝擊實驗.xls")
+        st.error("找不到文件：downloads/實驗2. 水衝擊實驗.xls")
 
 

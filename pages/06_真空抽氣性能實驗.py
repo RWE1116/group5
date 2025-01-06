@@ -55,10 +55,10 @@ elif page == "儀器與設備":
     st.dataframe(df_instruments)
 
     # 插入圖片
-    img_path = "Y:/a/downloads/實驗六器材1.png"
+    img_path = "downloads/實驗六器材1.png"
     display_image(img_path, "實驗所用儀器與設備位置圖", "實驗所用儀器與設備")
 
-    img_path = "Y:/a/downloads/實驗六器材2.png"
+    img_path = "downloads/實驗六器材2.png"
     display_image(img_path, "實驗所用儀器與設備", "實驗所用儀器與設備")
 
 elif page == "實驗原理":
@@ -73,9 +73,9 @@ elif page == "實驗原理":
     抽真空過程中的壓力變化可以表示為： 
     """)
     # 添加圖片展示
-    img_path = os.path.join("Y:/a/downloads", "實驗六原理.png")
+    img_path = os.path.join("downloads", "實驗六原理.png")
     display_image(img_path, "壓力變化模型", "壓力變化模型")
-    img_path = os.path.join("Y:/a/downloads", "實驗六原理1.png")
+    img_path = os.path.join("downloads", "實驗六原理1.png")
     display_image(img_path, "壓力變化模型項目解釋", "壓力變化模型項目解釋")
     st.markdown(""" 
     4. 漏氣檢測
@@ -89,7 +89,7 @@ elif page == "實驗原理":
     6. 等效氣導 (Conductance)
     系統中管路的氣體導通性影響抽氣效率，等效氣導可用公式計算，表示管路對氣體流動的限制程度。
     """)
-    img_path = os.path.join("Y:/a/downloads", "實驗六原理2.png")
+    img_path = os.path.join("downloads", "實驗六原理2.png")
     display_image(img_path, "等效氣導 (Conductance)", "等效氣導 (Conductance)")
 
 elif page == "實驗步驟":
@@ -132,8 +132,8 @@ elif page == "圖片與影片":
     cols = st.columns(3)
 
     image_paths = [
-        "Y:/a/downloads/實驗6-1.jpg", "Y:/a/downloads/實驗6-2.jpg", "Y:/a/downloads/實驗6-3.jpg",
-        "Y:/a/downloads/實驗6-4.jpg", "Y:/a/downloads/實驗6-5.jpg", "Y:/a/downloads/實驗6-6.jpg"
+        "downloads/實驗6-1.jpg", "downloads/實驗6-2.jpg", "downloads/實驗6-3.jpg",
+        "downloads/實驗6-4.jpg", "downloads/實驗6-5.jpg", "downloads/實驗6-6.jpg"
     ]
     titles = ["實驗儀器", "壓力表 (最高數值)", "壓力表 (10秒數值)", "壓力表 (15秒數值)", "壓力表 (35秒數值)", "壓力表 (40秒數值)"]
     descriptions = ["機械幫浦啟動", "最高數值", "10秒數值", "15秒數值", "35秒數值", "40秒數值"]
@@ -144,14 +144,14 @@ elif page == "圖片與影片":
             display_image(image_path, title, description)
 
     st.subheader("半開實驗影片")
-    video_path = 'Y:/a/downloads/半開.mp4'
+    video_path = 'downloads/半開.mp4'
     if os.path.exists(video_path):
         st.video(video_path)
     else:
         st.error(f"找不到影片：{video_path}")
 
     st.subheader("全開實驗影片")
-    video_path = 'Y:/a/downloads/全開.mp4'
+    video_path = 'downloads/全開.mp4'
     if os.path.exists(video_path):
         st.video(video_path)
     else:
@@ -162,7 +162,7 @@ elif page == "相關資料":
     
     # 下載 PDF 文件
     try:
-        with open(r"Y:/a/downloads/實驗6. 真空抽氣性能實驗.pdf", "rb") as file:
+        with open(r"downloads/實驗6. 真空抽氣性能實驗.pdf", "rb") as file:
             st.download_button(
                 label="下載 實驗6. 真空抽氣性能實驗.pdf",
                 data=file.read(),
@@ -170,11 +170,11 @@ elif page == "相關資料":
                 mime="application/pdf"
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗6. 真空抽氣性能實驗.pdf")
+        st.error("找不到文件：downloads/實驗6. 真空抽氣性能實驗.pdf")
 
     # 下載 DOC 檔案
     try:
-        with open(r"Y:/a/downloads/實驗6. 真空抽氣性能實驗.doc", "rb") as file:
+        with open(r"downloads/實驗6. 真空抽氣性能實驗.doc", "rb") as file:
             st.download_button(
                 label="下載 實驗6. 真空抽氣性能實驗.doc",
                 data=file.read(),
@@ -182,11 +182,11 @@ elif page == "相關資料":
                 mime="application/msword"  # DOC 文件的 MIME 類型
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗6. 真空抽氣性能實驗.doc")
+        st.error("找不到文件：downloads/實驗6. 真空抽氣性能實驗.doc")
     
     # 下載 STEP 檔案
     try:
-        with open("Y:/a/downloads/final.stp", "rb") as file:
+        with open("downloads/final.stp", "rb") as file:
             st.download_button(
                 label="下載 真空管.stp",  # 按鈕標籤
                 data=file.read(),        # 文件內容
@@ -194,11 +194,11 @@ elif page == "相關資料":
                 mime="application/stp"   # MIME 類型，STEP 文件通常使用 "application/step"
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/final.stp")
+        st.error("找不到文件：downloads/final.stp")
     
     # 下載 ZIP 文件
     try:
-        with open(r"Y:/a/downloads/3D(Generator).zip", "rb") as file:
+        with open(r"downloads/3D(Generator).zip", "rb") as file:
             st.download_button(
                 label="下載 3D(Generator).zip",
                 data=file.read(),
@@ -206,21 +206,21 @@ elif page == "相關資料":
                 mime="application/zip"  # 設置 MIME 類型為 ZIP
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/3D(Generator).zip")
+        st.error("找不到文件：downloads/3D(Generator).zip")
     
     # 顯示圖片
     images = [
-        (r"Y:/a/downloads/工程圖1.jpg", "真空管設計", "經過測試後考量加工預值"),
-        ("Y:/a/downloads/模擬1.png", "真空管壓力", "這是V=1m/s下的實驗結果"),
-        ("Y:/a/downloads/模擬2.png", "真空管流速", "這是V=1m/s下的實驗結果"),
-        (r"Y:/a/downloads/模擬3.png", "真空管流量", "這是V=1m/s下的實驗結果"),
+        (r"downloads/工程圖1.jpg", "真空管設計", "經過測試後考量加工預值"),
+        ("downloads/模擬1.png", "真空管壓力", "這是V=1m/s下的實驗結果"),
+        ("downloads/模擬2.png", "真空管流速", "這是V=1m/s下的實驗結果"),
+        (r"downloads/模擬3.png", "真空管流量", "這是V=1m/s下的實驗結果"),
     ]
     for image_path, title, description in images:
         display_image(image_path, title, description)
     
     # 下載 Excel 文件
     try:
-        with open(r"Y:/a/downloads/Vacuum Generator Design(1131225)template.xlsx", "rb") as file:
+        with open(r"downloads/Vacuum Generator Design(1131225)template.xlsx", "rb") as file:
             st.download_button(
                 label="下載 Vacuum Generator Design(1131225)template.xlsx",  # 按鈕標籤
                 data=file.read(),            # 文件內容
@@ -228,11 +228,11 @@ elif page == "相關資料":
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # MIME 類型，Excel 文件
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/Vacuum Generator Design(1131225)template.xlsx")
+        st.error("找不到文件：downloads/Vacuum Generator Design(1131225)template.xlsx")
     
     # 下載 Excel 文件
     try:
-        with open(r"Y:/a/downloads/實驗6.真空抽氣性能實驗.xls", "rb") as file:
+        with open(r"downloads/實驗6.真空抽氣性能實驗.xls", "rb") as file:
             st.download_button(
                 label="下載 實驗6.真空抽氣性能實驗.xls",  # 按鈕標籤
                 data=file.read(),            # 文件內容
@@ -240,5 +240,5 @@ elif page == "相關資料":
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # MIME 類型，Excel 文件
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗6.真空抽氣性能實驗.xls")
+        st.error("找不到文件：downloads/實驗6.真空抽氣性能實驗.xls")
 

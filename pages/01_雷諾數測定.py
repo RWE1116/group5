@@ -54,7 +54,7 @@ elif page == "儀器與設備":
     st.dataframe(df_instruments)
     
     # 插入圖片
-    img_path = "Y:/a/downloads/實驗一器材1.png"
+    img_path = "downloads/實驗一器材1.png"
     display_image(img_path, "器材位置尺寸圖", "器材組合位置尺寸圖")
     
 
@@ -69,7 +69,7 @@ elif page == "實驗原理":
 """)
 
     # 添加圖片展示
-    img_path = os.path.join("Y:/a/downloads", "實驗一原理1.png")
+    img_path = os.path.join("downloads", "實驗一原理1.png")
     display_image(img_path, "雷諾數單位換算", "雷諾數單位換算")
     st.markdown(""" 
 由上可知，Re為一無因次參數，亦即其值不因使用之單位系統不同而發生變化。此 參數之重要性乃在Re之大小與流體之流動情況是層流或擾流有關。當雷諾數小時，流動形態成層狀或板狀運動，在巨觀下，其相鄰各層並無混合現象。此時若將一細絲狀之染料注入其中， 可看出此染料成一條線而不致散開，此即大家所熟知的層流。現若稍微加快流速，使Re稍微家大，吾人可發現此層狀流體在管路下游 處成不穩定之擾動現象，此種上游層流，下游擾流之現象，稱為轉換區。""")
@@ -101,7 +101,7 @@ elif page == "實驗數據表格":
     st.subheader("實驗數據表格展示")
 
     # 顯示圖片
-    img_path = os.path.join("Y:/a/downloads", "實驗一表格.png")
+    img_path = os.path.join("downloads", "實驗一表格.png")
     display_image(img_path, "雷諾數計算", "雷諾數計算")
 
     # 實驗數據字典
@@ -139,10 +139,10 @@ elif page == "圖片與影片":
     st.subheader("實驗圖片與影片展示")
     
     images = [
-    ("Y:/a/downloads/實驗1-1.jpg", "墨水控制閥", "打開墨水控制閥"),
-    ("Y:/a/downloads/實驗1-2.jpg", "量杯", "測量水量以及紀錄時間"),
-    ("Y:/a/downloads/實驗1-3.jpg", "水閥", "控制水量"),
-    ("Y:/a/downloads/實驗1-4.jpg", "點滴液瓶", "墨水管及控制閥"),
+    ("downloads/實驗1-1.jpg", "墨水控制閥", "打開墨水控制閥"),
+    ("downloads/實驗1-2.jpg", "量杯", "測量水量以及紀錄時間"),
+    ("downloads/實驗1-3.jpg", "水閥", "控制水量"),
+    ("downloads/實驗1-4.jpg", "點滴液瓶", "墨水管及控制閥"),
 ]
 
     
@@ -155,7 +155,7 @@ elif page == "相關資料":
     
     # 下載 PDF 文件
     try:
-        with open(r"Y:/a/downloads/實驗1. 雷諾數實驗.pdf", "rb") as file:
+        with open(r"downloads/實驗1. 雷諾數實驗.pdf", "rb") as file:
             st.download_button(
                 label="下載 實驗1. 雷諾數實驗.pdf",
                 data=file.read(),
@@ -163,11 +163,11 @@ elif page == "相關資料":
                 mime="application/pdf"  # 設置 MIME 類型為 PDF
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗1. 雷諾數實驗.pdf")
+        st.error("找不到文件：downloads/實驗1. 雷諾數實驗.pdf")
 
     # 下載 DOC 檔案
     try:
-        with open(r"Y:/a/downloads/實驗1. 雷諾數實驗.doc", "rb") as file:
+        with open(r"downloads/實驗1. 雷諾數實驗.doc", "rb") as file:
             st.download_button(
                 label="下載 實驗1. 雷諾數實驗.doc",
                 data=file.read(),
@@ -175,10 +175,10 @@ elif page == "相關資料":
                 mime="application/msword"  # DOC 文件的 MIME 類型
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗1. 雷諾數實驗.doc")
+        st.error("找不到文件：downloads/實驗1. 雷諾數實驗.doc")
     # 下載 Excel 文件
     try:
-        with open(r"Y:/a/downloads/實驗1. 雷諾數實驗.xlsx", "rb") as file:
+        with open(r"downloads/實驗1. 雷諾數實驗.xlsx", "rb") as file:
             st.download_button(
                 label="下載 實驗1. 雷諾數實驗.xlsx",  # 按鈕標籤
                 data=file.read(),            # 文件內容
@@ -186,4 +186,4 @@ elif page == "相關資料":
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # MIME 類型，Excel 文件
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗1. 雷諾數實驗.xlsx")
+        st.error("找不到文件：downloads/實驗1. 雷諾數實驗.xlsx")

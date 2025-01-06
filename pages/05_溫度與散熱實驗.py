@@ -53,7 +53,7 @@ elif page == "實驗原理":
     """)
 
     # 顯示實驗原理圖片
-    image_path = r"Y:/a/downloads/實驗五實驗原理.png"
+    image_path = r"downloads/實驗五實驗原理.png"
     try:
         img = Image.open(image_path)
         st.image(img, caption="實驗五實驗原理", use_column_width=True)  # 顯示圖片
@@ -101,15 +101,15 @@ elif page == "圖片與影片":
     st.markdown("### 圖片展示")
     
     images = [
-        (r"Y:/a/downloads/實驗5-1.jpg", "當電壓為3V時的結果", "第一組實驗，直流電源供應器"),
-        (r"Y:/a/downloads/實驗5-2.jpg", "當電壓為3V時的結果", "第一組實驗，照度計"),
-        (r"Y:/a/downloads/實驗5-3.jpg", "當電壓為3V時的結果", "第一組實驗，多功能電表(FLUKE 287)"),
-        (r"Y:/a/downloads/實驗5-4.jpg", "當電壓為3.3V時的結果", "第二組實驗，直流電源供應器"),
-        (r"Y:/a/downloads/實驗5-5.jpg", "當電壓為3.3V時的結果", "第二組實驗，照度計"),
-        (r"Y:/a/downloads/實驗5-6.jpg", "當電壓為3.3V時的結果", "第二組實驗，多功能電表(FLUKE 287)"),
-        (r"Y:/a/downloads/實驗5-7.jpg", "當電壓為3.9V時的結果", "第三組實驗，直流電源供應器"),
-        (r"Y:/a/downloads/實驗5-8.jpg", "當電壓為3.9V時的結果", "第三組實驗，照度計"),
-        (r"Y:/a/downloads/實驗5-9.jpg", "當電壓為3.9V時的結果", "第三組實驗，多功能電表(FLUKE 287)"),
+        (r"downloads/實驗5-1.jpg", "當電壓為3V時的結果", "第一組實驗，直流電源供應器"),
+        (r"downloads/實驗5-2.jpg", "當電壓為3V時的結果", "第一組實驗，照度計"),
+        (r"downloads/實驗5-3.jpg", "當電壓為3V時的結果", "第一組實驗，多功能電表(FLUKE 287)"),
+        (r"downloads/實驗5-4.jpg", "當電壓為3.3V時的結果", "第二組實驗，直流電源供應器"),
+        (r"downloads/實驗5-5.jpg", "當電壓為3.3V時的結果", "第二組實驗，照度計"),
+        (r"downloads/實驗5-6.jpg", "當電壓為3.3V時的結果", "第二組實驗，多功能電表(FLUKE 287)"),
+        (r"downloads/實驗5-7.jpg", "當電壓為3.9V時的結果", "第三組實驗，直流電源供應器"),
+        (r"downloads/實驗5-8.jpg", "當電壓為3.9V時的結果", "第三組實驗，照度計"),
+        (r"downloads/實驗5-9.jpg", "當電壓為3.9V時的結果", "第三組實驗，多功能電表(FLUKE 287)"),
     ]
     
     # 每行顯示3張圖片
@@ -134,7 +134,7 @@ elif page == "相關資料":
 
     # 下載 第5組 實驗5.溫度與散熱實驗 PDF 檔案
     try:
-        with open(r"Y:/a/downloads/實驗5. 溫度與散熱實驗.pdf", "rb") as file:
+        with open(r"downloads/實驗5. 溫度與散熱實驗.pdf", "rb") as file:
             st.download_button(
                 label="下載 實驗5. 溫度與散熱實驗 PDF 檔案",
                 data=file.read(),
@@ -142,11 +142,11 @@ elif page == "相關資料":
                 mime="application/pdf"  # 設置 MIME 類型為 PDF
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗5. 溫度與散熱實驗.pdf")
+        st.error("找不到文件：downloads/實驗5. 溫度與散熱實驗.pdf")
 
     # 下載 實驗5.溫度與散熱實驗 DOC 檔案
     try:
-        with open(r"Y:/a/downloads/實驗5. 溫度與散熱實驗.doc", "rb") as file:
+        with open(r"downloads/實驗5. 溫度與散熱實驗.doc", "rb") as file:
             st.download_button(
                 label="下載 實驗5. 溫度與散熱實驗 DOC 檔案",
                 data=file.read(),
@@ -154,6 +154,6 @@ elif page == "相關資料":
                 mime="application/msword"  # DOC 文件的 MIME 類型
             )
     except FileNotFoundError:
-        st.error("找不到文件：Y:/a/downloads/實驗5. 溫度與散熱實驗.doc")
+        st.error("找不到文件：downloads/實驗5. 溫度與散熱實驗.doc")
 
 
