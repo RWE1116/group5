@@ -22,7 +22,7 @@ def download_file(file_path, file_label, mime_type, file_name, unique_key):
 st.subheader("相關資料下載")
 
 # 使用相對路徑設定文件路徑
-base_path = "downloads"  # 假設所有的文件都放在此文件夾中
+base_path = "downloads"  # 假設所有的文件都放在此文件夾
 
 # 下載文件1 (水衝擊實驗)
 download_file(os.path.join(base_path, "實驗1. 雷諾數實驗.pdf"), "下載 實驗1. 雷諾數實驗.pdf", "application/pdf", "實驗1. 雷諾數實驗.pdf", "key1")
