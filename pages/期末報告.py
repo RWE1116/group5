@@ -10,7 +10,7 @@ def display_image(image_path, title, description="無描述"):
     if os.path.exists(image_path):
         try:
             img = Image.open(image_path)
-            st.image(img, caption=title )  # 使用Streamlit的image顯示圖片
+            st.image(img, caption=title, use_column_width=True)  # 使用Streamlit的image顯示圖片
             st.write(f"<h5>{description}</h5>", unsafe_allow_html=True)
             st.markdown("---")  # 分隔線
         except Exception as e:
@@ -20,7 +20,7 @@ def display_image(image_path, title, description="無描述"):
 
 # 設置頁面標題和樣式
 st.title("期末報告")
-
+base_path = "downloads" 
 # 主選單
 page = st.sidebar.selectbox(
     "期末報告",
@@ -45,8 +45,8 @@ if page == "概論":
     適用溫度範圍：可在 0 至 60 ℃ 的環境下運行，適合多種工業環境。
     """)
     # 插入圖片
-    image=Image.open ( "downloads/期末報告1.png")
-    st.image(image,caption= "產生器外觀與規格")
+    img_path = "downloads/期末報告1.png"
+    display_image(img_path, "產生器外觀與規格", "產生器外觀與規格")
     img_path = "Y:/a/downloads/期末報告2.png"
     display_image(img_path, "產生器尺寸", "產生器尺寸")
     st.markdown(""" 
