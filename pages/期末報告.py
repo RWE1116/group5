@@ -46,7 +46,7 @@ if page == "概論":
     """)
     # 插入圖片
     image=Image.open ( "downloads/期末報告1.png")
-    st.image(image,caption= "產生器外觀與規格", "產生器外觀與規格")
+    st.image(image,caption= "產生器外觀與規格")
     img_path = "Y:/a/downloads/期末報告2.png"
     display_image(img_path, "產生器尺寸", "產生器尺寸")
     st.markdown(""" 
